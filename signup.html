@@ -19,16 +19,22 @@
 				<div class="image-holder">
 					<img src="assets/img/caixa.png" alt="">
 				</div>
-				<form method="post" action="forms/signin.php">
-					<h3>Log In</h3>
+				<form method="post" action="forms/signup.php">
+					<h3>REGISTER</h3>
 					<div class="form-row">
-						<input type="text" class="form-control" name="email" placeholder="Email" required>
-						<input type="password" class="form-control" name="password" placeholder="Password" required>
+						<input type="text" class="form-control" name="user" placeholder="User" autocomplete="off">
+						<input type="password" class="form-control" name="password" placeholder="Password" autocomplete="off">
 					</div>
-					<button>LOG IN
+
+                    <div class="form-row">
+                        <input type="text" class="form-control" name="email" placeholder="Email" autocomplete="off">
+						<input type="password" class="form-control" name="c_password" placeholder="Confirm Password" autocomplete="off">
+                    </div>
+					<button>REGISTER
 						<i class="zmdi zmdi-long-arrow-right"></i>
 					</button>
-					<i><a>Don't have an account?</a><a href="signup.html" class="text-center">create one now.</a></i>
+
+                    <a>Already have an account?</a><a href="signin.html" class="text-center">Log In</a>
 				</form>
 				
 			</div>

@@ -1,8 +1,9 @@
 <?php
-//          LOGIN
+//          REGISTER
 
-    $signmail = $_POST["email"];
-    $signpass = $_POST["password"];
+    $reguser = $_POST["user"];
+    $reggnpass = $_POST["password"];~
+    $regc_pass = $_POST["c_password"];
 
 //          DATABASE CONNECTION
 
