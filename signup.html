@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Sign In</title>
+		<title>Sign Up</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<!-- MATERIAL DESIGN ICONIC FONT -->
@@ -22,13 +22,13 @@
 				<form method="post" action="forms/signup.php">
 					<h3>REGISTER</h3>
 					<div class="form-row">
-						<input type="text" class="form-control" name="user" placeholder="User" autocomplete="off">
-						<input type="password" class="form-control" name="password" placeholder="Password" autocomplete="off">
+						<input type="text" class="form-control" name="user" placeholder="*User" autocomplete="off" required>
+						<input type="password" class="form-control" name="password" placeholder="*Password" autocomplete="off" required>
 					</div>
 
                     <div class="form-row">
-                        <input type="text" class="form-control" name="email" placeholder="Email" autocomplete="off">
-						<input type="password" class="form-control" name="c_password" placeholder="Confirm Password" autocomplete="off">
+                        <input type="text" class="form-control" name="email" placeholder="*Email" autocomplete="off" required>
+						<input type="password" class="form-control" name="c_password" placeholder="*Confirm Password" autocomplete="off" required>
                     </div>
 					<button>REGISTER
 						<i class="zmdi zmdi-long-arrow-right"></i>

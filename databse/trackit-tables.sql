@@ -4,11 +4,11 @@ USE trackit;
 
 CREATE TABLE logins(
     id INT(11) UNSIGNED NOT NULL,
-    email VARCHAR(70) NOT NULL,
+    nome VARCHAR(50) NOT NULL,
+    email VARCHAR(70) UNIQUE NOT NULL,
     password VARCHAR(50) NOT NULL,
     created_at TIMESTAMP NOT NULL,
-    update_at TIMESTAMP NOT NULL,
-    updated_at TIMESTAMP NULL,
+    update_at TIMESTAMP NULL,
     deleted_at TIMESTAMP NULL
 )engine = InnoDB;
 
@@ -28,7 +28,6 @@ CREATE TABLE package(
     receiver_adress VARCHAR(100) NOT NULL,
     user_id INT(11) UNIQUE NOT NULL,
     received_date TIMESTAMP,
-    sent_date TIMESTAMP,
     sent_date TIMESTAMP NULL,
     created_at TIMESTAMP NULL,
     updated_at TIMESTAMP NULL,
