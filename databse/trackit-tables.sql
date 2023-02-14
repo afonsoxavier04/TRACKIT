@@ -3,28 +3,34 @@ CREATE DATABASE trackit CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE trackit;
 
 CREATE TABLE logins(
-    id INT(11) UNIQUE UNSIGNED NOT NULL,
+    id INT(11) UNSIGNED NOT NULL,
+    nome VARCHAR(50) NOT NULL,
     email VARCHAR(70) NOT NULL,
     password VARCHAR(50) NOT NULL,
+    created_at TIMESTAMP NOT NULL,
+    updated_at TIMESTAMP NULL,
+    deleted_at TIMESTAMP NULL
 )engine = InnoDB;
 
 CREATE TABLE users(
-    id INT(11) UNIQUE UNSIGNED NOT NULL,
+    id INT(11) UNSIGNED NOT NULL,
     nome VARCHAR(50) NOT NULL,
-    email VARCHAR(50) UNSIGNED UNIQUE NOT NULL,
-    password VARCHAR(50 NOT NULL,
+    email VARCHAR(50) UNIQUE NOT NULL,
+    pass1 VARCHAR(50) NOT NULL,
     id_package INT(11) UNIQUE NOT NULL,
     created_at TIMESTAMP NOT NULL,
-    updated_at TIMESTAMP NOT NULL,
-    deleted_at TIMESTAMP NOT NULL
+    updated_at TIMESTAMP NULL,
+    deleted_at TIMESTAMP NULL
 )engine = InnoDB;
 
 CREATE TABLE package(
-    id INT(11) UNIQUE UNSIGNED NOT NULL,
+    id INT(11) UNSIGNED NOT NULL,
     receiver_adress VARCHAR(100) NOT NULL,
     user_id INT(11) UNIQUE NOT NULL,
     received_date TIMESTAMP NOT NULL,
-    sent_date TIMESTAMP NOT NULL,
-
+    sent_date TIMESTAMP NULL,
+    created_at TIMESTAMP NULL,
+    updated_at TIMESTAMP NULL,
+    deleted_at TIMESTAMP NULL
 )engine = InnoDB;
 
