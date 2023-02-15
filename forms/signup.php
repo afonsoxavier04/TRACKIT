@@ -16,9 +16,6 @@
     $reggnpass = $_POST["password"];
     $regc_pass = $_POST["c_password"];
 
-    $ash = md5($reggnpass,$regmail);
-    echo $ash;
-    
     require("../conect.php");
 
     // Insere o novo user na base de dados
@@ -30,6 +27,7 @@
         $user_id = mysqli_insert_id($con);
         // Define a sessão para o user
         $_SESSION['user_id'] = $user_id;
+        echo "Record inserted successfully";
         header("Location: ../signin.html");
     } else {
         echo "Error: " . mysqli_error($con);

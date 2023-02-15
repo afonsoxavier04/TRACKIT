@@ -27,7 +27,7 @@
             $_SESSION["username"] = $row["nome"];
             
             // redirecionar para a página index.html
-            header("Location: ../index.html");
+            header("Location: index.html");
             exit;
         } else {
             // exibir uma mensagem de erro
