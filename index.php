@@ -37,7 +37,7 @@
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="index.html">TrackIt</a></h1>
+      <h1 class="logo me-auto"><a href="index.php">TrackIt</a></h1>
 
       <nav id="navbar" class="navbar">
         <ul>
@@ -45,7 +45,7 @@
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#services">Services</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-          <li><a class="getstarted scrollto" href="signin.html">Sign Up / Sign In</a></li>
+          <li><a class="getstarted scrollto" href="signin.php">Sign Up / Sign In</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>

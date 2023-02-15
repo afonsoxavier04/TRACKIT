@@ -21,7 +21,7 @@
     // Insere o novo user na base de dados
     $stmt = mysqli_prepare($con, "INSERT INTO logins (nome,email,password) VALUES (?,?,?)");
     mysqli_stmt_bind_param($stmt, "sss", $reguser, $regmail, $reggnpass);
-
+ 
     if (mysqli_stmt_execute($stmt)) {
         // Obtem o ID do user recém-criado
         $user_id = mysqli_insert_id($con);
