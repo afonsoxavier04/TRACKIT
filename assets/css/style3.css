@@ -16,7 +16,8 @@ body {
   font-family: "Montserrat-Regular";
   font-size: 15px;
   color: #666;
-  margin: 0; }
+  margin: 0;
+  background-color: #ff8229; }
 
 p, h1, h2, h3, h4, h5, h6, ul {
   margin: 0; }
@@ -82,6 +83,10 @@ h3 {
   color: #333;
   text-transform: uppercase;
   font-family: "Arial"; }
+
+  #bola{
+    color: red;
+  }
 
 .form-control {
   height: 47px;
@@ -289,6 +294,5 @@ button {
     margin-bottom: 20px; }
 
   .wrapper {
-    background: none; } }
+    background: #000000; } }
 
-/*# sourceMappingURL=style.css.map */
