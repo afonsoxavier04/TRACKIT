@@ -23,23 +23,23 @@
 				<script>
 
 				</script>
-				<form method="post" action="forms/signup.php">
+				<form method="post" action="signup.php">
 					<h3>REGISTER</h3>
 					<div class="form-row">
 						<input type="text" class="form-control" name="user" placeholder="*User" autocomplete="off" required>
-						<input type="password" class="form-control" name="password" placeholder="*Password" autocomplete="off" onblur="passwordCheck()" required>
+						<input type="password" id="pass" class="form-control" name="password" placeholder="*Password" autocomplete="off" onchange="comparar()" required>
 					</div>
 
                     <div class="form-row">
                         <input type="text" class="form-control" name="email" placeholder="*Email" autocomplete="off" required>
-						<input type="password" class="form-control" name="c_password" placeholder="*Confirm Password" autocomplete="off" onblur="passwordCheck()" required>
+						<input type="password" id="confirm_pass"class="form-control" name="c_password" placeholder="*Confirm Password" autocomplete="off" onchange="comparar()" required>
                     </div>
-					<p id="bola" style="display:none">a<p>
+					<center><p id="bola">Password's dont match<p></center>
 					<button>REGISTER
-						<i class="zmdi zmdi-long-arrow-right"></i>
+						<i class="zmdi zmdi-long-arrow-right" name="reg_but" id="reg_but"></i>
 					</button>
 
-                    <a>Already have an account?</a><a href="signin.php" class="text-center">Log In</a>
+                    <center><a>Already have an account?</a><a href="signin.php" id="reg_but" class="text-center">Log In</a></center>
 				</form>
 				
 			</div>
@@ -68,7 +68,7 @@
     $reggnpass = $_POST["password"];
     $regc_pass = $_POST["c_password"];
 
-    require("../conect.php");
+    include("conect.php");
 
     // Insere o novo user na base de dados
     $stmt = mysqli_prepare($con, "INSERT INTO logins (nome,email,password) VALUES (?,?,?)");
@@ -80,7 +80,7 @@
         // Define a sessão para o user
         $_SESSION['user_id'] = $user_id;
         echo "Record inserted successfully";
-        header("Location: ../signin.html");
+        header("Location: signin.php");
     } else {
         echo "Error: " . mysqli_error($con);
     }

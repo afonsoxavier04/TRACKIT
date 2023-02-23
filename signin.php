@@ -19,11 +19,11 @@
 				<div class="image-holder">
 					<img src="assets/img/caixa.png" alt="">
 				</div>
-				<form method="post" action="forms/signin.php">
+				<form method="post" action="signin.php">
 					<h3>Log In</h3>
 					<div class="form-row">
 						<input type="text" class="form-control" name="email" placeholder="Email" required>
-						<input type="password" class="form-control" name="password" placeholder="Password" required>		
+						<input type="password" class="form-cotntrol" name="password" placeholder="Password" required>		
 					</div>	
 					<button>LOG IN
 						<i class="zmdi zmdi-long-arrow-right"></i>
@@ -40,6 +40,7 @@
 </html>
 
 <?php
+
     session_start();
 
     // verificar se o formulário foi enviado
@@ -49,7 +50,7 @@
         $signpass = $_POST["password"];
 
         // conectar ao banco de dados
-        require("../conect.php");
+        require("conect.php");
 
         // preparar a consulta SQL para selecionar o usuário pelo email e senha
         $stmt = mysqli_prepare($con, "SELECT * FROM logins WHERE email = ? AND password = ?");
@@ -68,11 +69,11 @@
             $_SESSION["username"] = $row["nome"];
             
             // redirecionar para a página index.html
-            header("Location: index.html");
+            header("Location: index.php");
             exit;
         } else {
             // exibir uma mensagem de erro
-            echo "Login inválido.";
+            echo "Invalid Login";
         }
 
         // fechar a conexão com o banco de dados
